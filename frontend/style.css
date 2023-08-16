@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.option-container{
+    height: 4rem;
+    width: 3.5rem;
+    background-color: #ecf0f1;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tool-container{
+    display: flex; /*Ek line me saare item laane ke liye we use flex */
+    height: 5rem;
+    width: 55vmax;
+    background-color: #ecf0f1;
+    justify-content: space-around;
+    position: absolute;
+    top: 2rem;
+    left: 25vmax;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.scale-tool{
+    animation-name: scale-tool;
+    animation-duration: 0.8s;
+}
+@keyframes scale-tool{
+    0%{
+        transform : scale(0.1);
+    }
+    100%{
+        transform : scale(1);
+    }
+}
+/*tool container ke andar jitne bhi image hai sabko
+display block kardeta hu and sabki height and width set kardeta hu*/
+.tool-container > *{
+    display: block;
+    width: 4rem;
+
+}
+.pencil-tool-container{
+    height: 5rem;
+    width: 7rem;
+    background-color: #ecf0f1;
+    position: absolute;
+    top: 7rem;
+    left: 25vmax;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+.pencil-width{
+    background-color: #ecf0f1;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pencil-width input{
+    width: 80%;
+}
+.pencil-color{
+    background-color: #ecf0f1;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.pencil{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.Blue{
+    background-color: blue;
+}
+.eraser-tool{
+    height: 2rem;
+    width: 6rem;
+    background-color: #ecf0f1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 7rem;
+    left: 34vw;
+}
+.eraser-tool input{
+    width: 80%;
+}
+.sticky-container{
+    height: 15rem;
+    width: 15rem;
+    position : absolute;
+    top: 15rem;
+    left: 10rem;
+}
+.header-container{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ecf0f1;
+}
+.header-container > *{
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+
+}
+.minimize{
+    background-color: #27ae60;
+}
+.remove{
+    background-color: #e74c3c;
+}
+.note-container{
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+img{
+    height: 100%;
+    width: 100%;
+}

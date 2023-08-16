@@ -1,0 +1,19 @@
+socket.io : Realtime dataflow 
+Requirement .
+Need to create Express ka server 
+we will be using socket io ki library which can be downloaded through npm
+
+right click on server.js and open integrated terminal 
+npm init 
+
+now we need express 
+npm intall express
+npm install socket.io
+
+node server.js
+
+node mon ,agar aapki app me kuch error aagaya then yeh usko rectify karke firse restart hojaayega.
+npm install --save-dev nodemon
+
+
+socket io cdn

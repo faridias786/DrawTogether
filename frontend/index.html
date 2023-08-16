@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="option-container">
+        <!--Font Awesome : Hamburger icon-->
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tool-container scale-tool">
+        <img class="pencil1" src="icons/Pencil.svg">
+        <img class="eraser1" src="icons/Eraser.svg">
+        <img class="download" src="icons/Download.svg">
+        <img class="Upload" src="icons/Upload.svg">
+        <img class="sticky-1" src="icons/StickyNote.svg">
+        <img class="redo" src="icons/Redo.svg">
+        <img class="undo" src="icons/Undo.svg">
+    </div>
+    <div class="pencil-tool-container">
+        <div class="pencil-width">
+            <input type="range" min="2" max="10" value="3" class="pencil-width-container">
+        </div>
+        <div class="pencil-color">
+            <div class="black pencil"></div>
+            <div class="red pencil"></div>
+            <div class="Blue pencil"></div>
+        </div>
+    </div>
+    <div class="eraser-tool">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div>
+    <!--
+        <div class="sticky-container">
+            <div class="header-container">
+                <div class="minimize"></div>
+                <div class="remove"></div>
+            </div>
+            <div class="note-container">
+                <textarea></textarea>
+            </div>
+        </div>
+    -->
+    <!--Canvas - Graphics Drawing (2d) --(HTML,API Browser)-->
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+    <script>
+        //frontend will connect to server 
+        let socket = io.connect("http://127.0.0.1:3000");
+    </script>
+    <script src="./script.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
