@@ -4,7 +4,7 @@ const socket = require("socket.io");
 
 const app = express();//initialize and server ready //express variable ke andar express() fucntion tha toh usko mene app ko assign kardiya
 app.use(express.static("frontend"));
-let port = 3000;
+let port = process.env.PORT || 3000;
 //node app.js server start ,listen matlab ab woh server jo bhi frontend se request aayegi usko accept karega
 let server = app.listen(port,()=>{
     console.log("listening to port" + port);

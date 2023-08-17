@@ -17,3 +17,5 @@ npm install --save-dev nodemon
 
 
 socket io cdn
+
+let port = process.env.PORT || 3000;
